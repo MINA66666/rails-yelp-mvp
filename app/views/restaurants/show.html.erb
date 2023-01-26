@@ -1,0 +1,13 @@
+<div class="container-fluid container bg-primary display-1" >
+<h1><%= @restaurant.name %></h1>
+<p><%= @restaurant.category %></p>
+<p><%= @restaurant.address %></p>
+<li><%= @restaurant.phone_number %></p>
+</div>
+<p><strong>Reviews</strong></p>
+<ul class="list-group">
+  <% @restaurant.reviews.each do |review| %>
+    <li class="list-group-item"><%= review.content %></li>
+  <% end %>
+</ul>
+<br>

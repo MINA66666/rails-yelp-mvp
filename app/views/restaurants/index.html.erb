@@ -1,0 +1,9 @@
+<div class="mx-auto" style="width: 200px;">
+<h1>Restaurant</h1>
+<% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </li>
+      <% end %>
+<p> <%= link_to "Add a new Restaurant", new_restaurant_path, class: 'btn btn-primary' %></p>
+</div>
